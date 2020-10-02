@@ -6,7 +6,9 @@ const TodoList = ({ todos }) => {
         <Paper>
             <List>
                 { todos.map( todo =>
+                
                     <> 
+                    {console.log(todo)}
                         <ListItem>
                             <ListItemText>{ todo.task }</ListItemText> 
                         </ListItem>
