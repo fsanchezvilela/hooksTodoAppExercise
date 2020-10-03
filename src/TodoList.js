@@ -4,21 +4,19 @@ import { Paper, List, Divider } from '@material-ui/core';
 
 const TodoList = ({ todos, removeTodo, toggleTodo, editTodo }) => {
   return (
+    todos.length > 0 && 
     <Paper>
       <List>
         {todos.map((todo,index) => (
-          <>
+          <div key={todo.id}>
             <Todo
-              task={todo.task}
-              key={todo.id}
-              completed={todo.completed}
+              {...todo}
               removeTodo={removeTodo}
               toggleTodo={toggleTodo}
               editTodo={editTodo}
-              id={todo.id}
             />
             {index < todos.length - 1 && <Divider /> }
-          </>
+          </div>
         ))}
       </List>
     </Paper>

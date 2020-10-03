@@ -25,7 +25,7 @@ const Todo = ({ task, completed, removeTodo, id, toggleTodo, editTodo }) => {
         <>
           <Checkbox
             tabIndex={-1}
-            checked={completed}
+            checked={completed || false}
             onClick={() => toggleTodo(id)}
           />
           <ListItemText
